@@ -1,0 +1,64 @@
+Label: R TRAPEZIUS LOWER FIBERS: EMG 1 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: R TRAPEZIUS LOWER FIBERS: Acc 1.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R TRAPEZIUS LOWER FIBERS: Acc 1.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R TRAPEZIUS LOWER FIBERS: Acc 1.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L TRAPEZIUS LOWER FIBERS: EMG 2 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: L TRAPEZIUS LOWER FIBERS: Acc 2.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L TRAPEZIUS LOWER FIBERS: Acc 2.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L TRAPEZIUS LOWER FIBERS: Acc 2.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R DELTOID: EMG 3 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: R DELTOID: Acc 3.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R DELTOID: Acc 3.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R DELTOID: Acc 3.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L DELTOID: EMG 4 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: L DELTOID: Acc 4.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L DELTOID: Acc 4.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L DELTOID: Acc 4.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R BICEPS BRACHII: EMG 5 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: R BICEPS BRACHII: Acc 5.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R BICEPS BRACHII: Acc 5.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R BICEPS BRACHII: Acc 5.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L BICEPS BRACHII: EMG 6 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: L BICEPS BRACHII: Acc 6.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L BICEPS BRACHII: Acc 6.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L BICEPS BRACHII: Acc 6.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R TRICEPS BRACHII: EMG 7 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: R TRICEPS BRACHII: Acc 7.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R TRICEPS BRACHII: Acc 7.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R TRICEPS BRACHII: Acc 7.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L TRICEPS BRACHII: EMG 8 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: L TRICEPS BRACHII: Acc 8.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L TRICEPS BRACHII: Acc 8.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L TRICEPS BRACHII: Acc 8.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R BRACHIORADIALIS: EMG 9 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: R BRACHIORADIALIS: Acc 9.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R BRACHIORADIALIS: Acc 9.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R BRACHIORADIALIS: Acc 9.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L BRACHIORADIALIS: EMG 10 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: L BRACHIORADIALIS: Acc 10.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L BRACHIORADIALIS: Acc 10.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L BRACHIORADIALIS: Acc 10.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R EXTENSOR CARPI RADIALIS: EMG 11 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: R EXTENSOR CARPI RADIALIS: Acc 11.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R EXTENSOR CARPI RADIALIS: Acc 11.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R EXTENSOR CARPI RADIALIS: Acc 11.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L EXTENSOR CARPI RADIALIS: EMG 12 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: L EXTENSOR CARPI RADIALIS: Acc 12.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L EXTENSOR CARPI RADIALIS: Acc 12.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L EXTENSOR CARPI RADIALIS: Acc 12.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R ABDUCTOR POLLICIS BREVIS: EMG 13 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: R ABDUCTOR POLLICIS BREVIS: Acc 13.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R ABDUCTOR POLLICIS BREVIS: Acc 13.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R ABDUCTOR POLLICIS BREVIS: Acc 13.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L ABDUCTOR POLLICIS BREVIS: EMG 14 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: L ABDUCTOR POLLICIS BREVIS: Acc 14.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L ABDUCTOR POLLICIS BREVIS: Acc 14.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L ABDUCTOR POLLICIS BREVIS: Acc 14.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R TRAPEZIUS: EMG 15 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: R TRAPEZIUS: Acc 15.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R TRAPEZIUS: Acc 15.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: R TRAPEZIUS: Acc 15.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L TRAPEZIUS: EMG 16 Sampling frequency: 1.925926e+003 Number of points: 49062 X start: 0.000000e+000 Unit: Volts Domain Unit: s
+Label: L TRAPEZIUS: Acc 16.X Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L TRAPEZIUS: Acc 16.Y Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s
+Label: L TRAPEZIUS: Acc 16.Z Sampling frequency: 1.481481e+002 Number of points: 3774 X start: 0.000000e+000 Unit: g Domain Unit: s

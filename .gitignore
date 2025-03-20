@@ -1,0 +1,4 @@
+data/*
+!data/cabecalho.csv
+venv/
+*/__pycache__/
