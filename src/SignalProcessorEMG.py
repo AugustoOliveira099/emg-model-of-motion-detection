@@ -70,7 +70,6 @@ class SignalProcessorEMG:
         self.features[stage][movement] = {}
         for column_index in movement_intervals[_movement].keys():
           column = self.data_columns[column_index]
-          print(self.movement_data[stage].keys())
           windows = self.movement_data[stage][movement][column]
           self.features[stage][movement][column] = [self.__extract_window_features(window) for window in windows]
           self.__add_movement_feature(windows, movement_intervals, stage, _movement, column, column_index)
@@ -147,7 +146,7 @@ class SignalProcessorEMG:
   
   def __bandpass_filter(self, signal, N = 4, freq_low = 20, freq_high = 450, fs = 1926):
     b,a = butter(N=N,Wn=[freq_low,freq_high],btype='bandpass',fs=fs)
-    filtered = filtfilt(b,a,signal)
+    filtered = filtfilt(b, a, signal)
     return filtered
 
   def __extract_window_features(self, window):

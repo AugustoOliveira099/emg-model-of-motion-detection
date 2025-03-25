@@ -1,4 +1,9 @@
 data/*
 !data/cabecalho.csv
+!data/rf_model.pkl
+
+assets/*
+!assets/.gitkeep
+
 venv/
 */__pycache__/
