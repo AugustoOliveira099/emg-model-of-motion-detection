@@ -1,4 +1,4 @@
-from RandomForestModelTrainer import RandomForestModelTrainer
+from Utils.RandomForestModelTrainer import RandomForestModelTrainer
 
 rf_model = RandomForestModelTrainer()
 df = rf_model.load_features_to_dataframe()
