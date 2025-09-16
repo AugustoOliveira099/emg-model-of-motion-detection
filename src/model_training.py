@@ -1,4 +1,7 @@
 from models import RandomForestModel
+from training.preprocess_train_signals import preprocess_and_save_signals
+
+preprocess_and_save_signals()
 
 rf_model = RandomForestModel()
 df = rf_model.load_features_to_dataframe()

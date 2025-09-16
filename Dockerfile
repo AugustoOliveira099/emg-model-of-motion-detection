@@ -23,8 +23,3 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 
 # Copy the rest of the application
 COPY . /app
-
-# Expose nothing by default; user can override
-
-# Default command: run the project's main script
-CMD ["python", "src/main.py"]
