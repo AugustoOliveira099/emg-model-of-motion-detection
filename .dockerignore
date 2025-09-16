@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.build/
+.dist/
+.data/
+.git
+.gitignore
+.idea/
+.vscode/
+*.egg-info
+dist/
+build/
+
+# Large data and assets — keep out of image by default; user can adjust
+data/
+assets/

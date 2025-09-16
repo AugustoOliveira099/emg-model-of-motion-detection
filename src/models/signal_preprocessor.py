@@ -1,10 +1,11 @@
-import re
 import numpy as np
 import pandas as pd
+from utils import Patient
 from scipy.signal import iirnotch, filtfilt, butter
 
 class SignalPreProcessor:
-  def __init__(self, signal):
+  def __init__(self, signal, name):
+    self.patient = Patient(name)
     self.features = {}
     self.windowed_dict = {}
     self.header_file = "cabecalho"
@@ -12,9 +13,10 @@ class SignalPreProcessor:
     self.signal = signal
     self.data_columns = self.time_columns = None
 
+
   def preprocess(self):
-    # self.__add_header()
-    # self.__get_relevant_columns()
+    self.__add_header()
+    self.__get_relevant_columns()
     self.data_columns, self.time_columns = self.__get_column_names()
     self.__apply_bandpass_filter()
     self.__apply_notch_filter()
@@ -26,66 +28,23 @@ class SignalPreProcessor:
     self.__add_time_column()
     return self.features
 
+
   def get_signal(self):
     return self.signal
+  
+
+  def __add_header(self):
+    self.patient.add_header()
+
 
   def __get_relevant_columns(self):
-    print ("Filtering relevant columns")
-    # Exclui as colunas que contêm '.X', '.Y' e '.Z' (dados do acelerômetro)
-    self.signal = self.signal.filter(regex=r'^(?:(?!\.X$|\.Y$|\.Z$).)*$', axis=1)
-
-    # Mantem as conlunas de 3 a 10
-    columns_to_maintain = [col for col in self.signal.columns if col[-1].isdigit() and 3 <= int(col.split()[-1]) <= 10]
-    self.signal = self.signal[columns_to_maintain]
-
-    # Trunca os dados acima dos 25s
-    self.signal = self.signal[self.signal.iloc[:, 0] <= 25]
+    self.patient.get_relevant_columns()
 
 
   def __get_column_names(self):
     data_columns = [self.signal.columns[i] for i in range(self.signal.shape[1]) if i % 2 != 0]
     time_columns = [self.signal.columns[i] for i in range(self.signal.shape[1]) if i % 2 == 0]
     return data_columns, time_columns
-
-  
-  def __add_header(self):
-    # Read the header file
-    with open(f"data/{self.header_file}.csv", 'r') as file:
-      header_lines = file.readlines()
-      header = [linha.strip() for linha in header_lines]
-
-      # Define the labels for the dataframe
-      formated_header = self.__define_labels(header)
-
-      # Add header to dataframe
-      self.signal = pd.DataFrame(self.signal.values, columns=formated_header)
-      
-      
-  def __define_labels(self, header):
-    """
-    Define labels for the dataframe based on the header file.
-
-    Args:
-      header (list): A list of header lines.
-
-    Returns:
-      list: A list of formatted header labels.
-    """
-    formated_header = []
-
-    for label in header:
-      pattern = re.compile(r'Label: (.*?)(?:\s*Sampling frequency:|$)', re.DOTALL)
-      match = pattern.search(label)
-
-      # Check if there was a match and get the extracted value
-      if match:
-          label_value = match.group(1).strip()
-          formated_header.append(f"TIME OF {label_value}")
-          formated_header.append(label_value)
-      else:
-          print("Could not find the value between Label and Sampling frequency.")
-
-    return formated_header
   
 
   def __apply_bandpass_filter(self, fs = 1926, lowcut = 20, highcut = 450, order = 4):
