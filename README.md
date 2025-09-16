@@ -83,32 +83,48 @@ git clone git@github.com:AugustoOliveira099/emg-model-of-motion-detection.git
 cd emg-model-of-motion-detection
 ```
 
-2. Build da imagem Docker:
+2. Build da imagem:
 
 ```bash
-docker build -t emg-model:latest .
+docker compose build
 ```
 
-3. Rodar o container montando os volumes `data` e `assets` (recomendado para não copiar dados grandes para a imagem):
+3. Rodar os serviços:
 
 ```bash
-docker run -it \
-	-v $(pwd)/data:/app/data \
-	-v $(pwd)/assets:/app/assets \
-  --name emg-container \
-	emg-model:latest bash
+docker compose up
 ```
 
-4. Logo em seguida, dentro do container, execute o modo interativo:
+4. Abra o terminal no container:
+
+```bash
+docker exec -it --rm emg-container bash
+```
+
+5. Logo em seguida, execute o código:
 
 ```bash
 python src/main.py
 ```
 
-5. Para rodar uma única predição sem entrar no modo interativo (útil em pipelines ou jobs):
+6. Para rodar uma única predição sem entrar no modo interativo (útil em pipelines ou jobs):
 
 ```bash
 python src/main.py --once --patient P1 --stage POS1 --movement P1_alcancarbola_POS1
+```
+
+7. Quando quiser parar, pressione `ctrl+C` ou aperte `q` e depois `Enter`.
+
+8. Para você conseguir voltar ao seu terminal e sair do terminal do container, basta executar:
+
+```bash
+exit
+```
+
+9. Antes de parar de usar a aplicação, pare os serviços:
+
+```bash
+docker compose down
 ```
 
 Os resultados (gráficos e arquivos de tempos) serão gerados em `assets/<patient_name>/<stage>/<movement>/`.
