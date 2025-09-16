@@ -92,13 +92,13 @@ docker compose build
 3. Rodar os serviços:
 
 ```bash
-docker compose up
+docker compose up -d
 ```
 
-4. Abra o terminal no container:
+4. Logo em seguida, abra o terminal no container criado com o comando abaixo:
 
 ```bash
-docker exec -it --rm emg-container bash
+docker exec -it emg-container bash
 ```
 
 5. Logo em seguida, execute o código:
@@ -113,7 +113,7 @@ python src/main.py
 python src/main.py --once --patient P1 --stage POS1 --movement P1_alcancarbola_POS1
 ```
 
-7. Quando quiser parar, pressione `ctrl+C` ou aperte `q` e depois `Enter`.
+7. Quando quiser parar, pressione `ctrl+C` OU aperte `q` e depois `Enter`.
 
 8. Para você conseguir voltar ao seu terminal e sair do terminal do container, basta executar:
 
