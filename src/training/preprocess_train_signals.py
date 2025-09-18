@@ -1,6 +1,6 @@
 from utils import Patient
-from SignalProcessorEMG import SignalProcessorEMG
-from movement_intervals import movement_intervals_p1, movement_intervals_p4, movement_intervals_p5
+from .signal_processor_emg import SignalProcessorEMG
+from .movement_intervals import movement_intervals_p1, movement_intervals_p4, movement_intervals_p5
 
 def preprocess_and_save_signals():
   # Inicializa os pacientes

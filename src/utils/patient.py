@@ -27,12 +27,16 @@ class Patient:
         Returns:
           dict: A dictionary containing movement data for each stage.
         """
-        stages = os.listdir(self.data_path)
+        stages = ["PRE", "POS1", "POS2"]
         movement_files = {}
         for stage in stages:
+            if not os.path.isdir(f"{self.data_path}/{stage}"):
+                continue  # Pula se não for um diretório
             print(f"Processing stage {stage} for patient {self.name}")
             movement_files_list = os.listdir(f"{self.data_path}/{stage}")
             for file in movement_files_list:
+                if not file.endswith('.csv'):
+                    continue  # Pula arquivos que não são CSV
                 print(f"Processing file {file}")
                 df = pd.read_csv(f"{self.data_path}/{stage}/{file}")
                 file_name = file.split(".")[0]
@@ -63,7 +67,7 @@ class Patient:
         """
         print("Filtering relevant columns (idempotent)")
         # Itera sobre os estágios
-        stages = os.listdir(self.data_path)
+        stages = ["PRE", "POS1", "POS2"]
         for stage in stages:
             # Percorre todos os dados
             for file_name in self.movements[stage].keys():
@@ -149,7 +153,7 @@ class Patient:
             formated_header = self.__define_labels(header)
 
             # Add header to each dataframe only when necessary
-            stages = os.listdir(self.data_path)
+            stages = ["PRE", "POS1", "POS2"]
             for stage in stages:
                 for file_name in list(self.movements[stage].keys()):
                     df = self.movements[stage][file_name]

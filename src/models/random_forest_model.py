@@ -1,6 +1,6 @@
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import ConfusionMatrixDisplay, accuracy_score
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
@@ -27,7 +27,13 @@ class RandomForestModel:
         #     "max_features": ["sqrt", "log2"],
         # }
         self.model = RandomForestClassifier(
-            max_depth=10, max_features="sqrt", min_samples_leaf=5, min_samples_split=2, n_estimators=100, random_state=3)
+            max_depth=10,
+            max_features="sqrt",
+            min_samples_leaf=5,
+            min_samples_split=2,
+            n_estimators=100,
+            random_state=3
+        )
         self.model.fit(X_train, y_train)
 
     def evaluate(self, X_test, y_test):
@@ -43,8 +49,18 @@ class RandomForestModel:
     def get_model(self):
         return self.model
 
-    def save_model(self, path='./rf_model.pkl'):
+    def save_model(self, path='./data/rf_model.pkl'):
         joblib.dump(self.model, path)
+
+    def get_confusion_matrix(self, X_test, y_test, save_path="./assets/confusion_matrix.png"):
+        y_pred = self.predict(X_test)
+        # Gerar e plotar matriz
+        disp = ConfusionMatrixDisplay.from_predictions(y_test, y_pred)
+        disp.ax_.set_title("Confusion Matrix")
+
+        # Salvar
+        plt.savefig(save_path, bbox_inches="tight")
+        plt.close()
 
     def load_features_to_dataframe(self, base_path='data/extracted_features'):
         all_features = []

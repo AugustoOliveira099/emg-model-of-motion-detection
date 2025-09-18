@@ -32,7 +32,20 @@ pip install -r requirements.txt
 python src/model_training.py
 ```
 
-Após o treinamento, o modelo (por padrão) é salvo como `rf_model.pkl` na raiz do projeto.
+Após o treinamento, o modelo (por padrão) é salvo como `rf_model.pkl` na pasta `data` do projeto.
+
+Caso ache melhor, você pode usar o Docker para treinar o modelo. Para isso, siga os passos presentes na seção 4 e mude apenas o script no passo 5.
+
+O modelo alcançou as seguintes acurácias:
+
+```
+accuracy on the validation set: 0.7622432859399684
+accuracy on the test set: 0.7679558011049724
+```
+
+Como matriz de confusão, foi gerada:
+
+![Matriz de confusão](./assets/confusion_matrix.png)
 
 
 ## 3) Predição interativa (uso principal)
@@ -101,13 +114,13 @@ docker compose up -d
 docker exec -it emg-container bash
 ```
 
-5. Logo em seguida, execute o código:
+5. Logo em seguida, escolha entre o passo 5 e o passo 6. Execute o comando a seguir para usar o programa no modo iterativo:
 
 ```bash
 python src/main.py
 ```
 
-6. Para rodar uma única predição sem entrar no modo interativo (útil em pipelines ou jobs):
+6. Como forma alternativa ao passo 5, você pode rodar uma única predição sem entrar no modo interativo (útil em pipelines ou jobs):
 
 ```bash
 python src/main.py --once --patient P1 --stage POS1 --movement P1_alcancarbola_POS1
@@ -137,15 +150,17 @@ A organização de entrada esperada é a seguinte. Cada paciente tem uma pasta, 
 data/patients/
 	├─ P1/
 	│   ├─ PRE/
-	│   │   ├─ P1_mov1.csv
-	│   │   └─ P1_mov2.csv
+	│   │   ├─ P1_alcancarbola_PRE.csv
+	│   │   └─ P1_mov2_PRE.csv
 	│   ├─ POS1/
-	│   │   └─ P1_alcancarbola_POS1.csv
+	│   │   ├─  P1_alcancarbola_POS1.csv
+	|	|	└─ P1_mov2_POS1.csv
 	│   └─ POS2/
-	│       └─ P1_mov3.csv
+	│       ├─ P1_alcancarbola_POS2.csv
+	|		└─ P1_mov2_POS2.csv
 	└─ P2/
 			└─ PRE/
-					└─ P2_mov1.csv
+					└─ P2_mov1_PRE.csv
 ```
 
 Observação importante:

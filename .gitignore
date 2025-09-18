@@ -1,9 +1,12 @@
 data/*
 !data/cabecalho.csv
 !data/rf_model.pkl
+!data/patients/.gitkeep
 
 assets/*
 !assets/.gitkeep
 
 venv/
 __pycache__
+
+.DS_Store

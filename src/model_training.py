@@ -11,4 +11,5 @@ X_val, X_test, y_val, y_test = rf_model.split_data(
 rf_model.train(X_train, y_train)
 print(f"accuracy on the validation set: {rf_model.evaluate(X_val, y_val)}")
 print(f"accuracy on the test set: {rf_model.evaluate(X_test, y_test)}")
-rf_model.save_model()
+rf_model.get_confusion_matrix(X_test, y_test, "./assets/confusion_matrix.png")
+rf_model.save_model(path='./data/rf_model.pkl')
