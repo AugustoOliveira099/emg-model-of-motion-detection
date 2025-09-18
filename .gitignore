@@ -4,6 +4,7 @@ data/*
 
 assets/*
 !assets/.gitkeep
+!assets/confusion_matrix.png
 
 venv/
 __pycache__
