@@ -9,4 +9,3 @@ services:
       - .:/app
     tty: true
     stdin_open: true
-    command: ["bash"]
