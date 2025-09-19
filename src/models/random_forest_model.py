@@ -112,22 +112,23 @@ class RandomForestModel:
                 # Salva com uma margem de 20% para melhor visualização
                 max = newMax + newMax * 20/100
 
-        for column_time, muscle in zip(signal.columns[::2], signal.columns[1::2]):
-            # for muscle, preds in predictions.items():
+        muscle_times_dict = {}
+        for idx, (column_time, muscle) in enumerate(zip(signal.columns[::2], signal.columns[1::2])):
             plt.figure(figsize=(10, 6))
             plt.plot(signal[column_time], signal[muscle])
             preds = predictions[muscle]
+            change_times = []
             for i in range(1, len(preds)):
                 if preds[i] != preds[i - 1]:
                     plt.axvline(x=times[muscle][i], color='r', linestyle='--')
-                    with open(os.path.join(output_dir, f'{muscle}_movement_times.txt'), 'a') as f:
-                        f.write(f'{times[muscle][i]}\n')
-            # # Fixa o eixo y com o menor eo maior valor encontrado entre os músculos
-            # # Alguns músculo possuem um pico de sinal, o que pode prejudicar a visualização
-            # plt.ylim(min, max)
+                    change_times.append(times[muscle][i])
+            muscle_times_dict[idx] = change_times
             plt.xlabel('Time')
             plt.ylabel('Signal')
             plt.title(f'Signal with Movement Predictions for {muscle}')
             plt.savefig(os.path.join(
                 output_dir, f'{muscle}_movement_predictions.png'))
             plt.close()
+        # Salva o dicionário de tempos em formato JSON
+        with open(os.path.join(output_dir, 'movement_times.json'), 'w') as f:
+            json.dump(muscle_times_dict, f, indent=2)
