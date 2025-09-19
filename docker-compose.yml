@@ -6,9 +6,7 @@ services:
     image: emg-model:latest
     container_name: emg-container
     volumes:
-      - ./data:/app/data
-      - ./assets:/app/assets
+      - .:/app
     tty: true
     stdin_open: true
-    # By default start a bash shell so user can run interactive commands
     command: ["bash"]
