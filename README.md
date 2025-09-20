@@ -3,16 +3,18 @@
 ## 1) Intuito do projeto
 Este projeto implementa um pipeline para detectar os instantes de início e fim de movimentos em sinais de EMG (eletromiografia) usando um classificador Random Forest. A ideia é extrair janelas de características a partir dos sinais, alimentar o classificador e produzir predições por janela que indicam quando um movimento começa e termina.
 
-Os dados usados aqui foram coletados em uma pesquisa aplicada voltada a pacientes com ELA (esclerose lateral amiotrófica). O estudo foi conduzido pela mestre em fisioterapia pela Universidade Federal do Rio Grande do Norte (UFRN), Bruna Ribeiro Pinheiro Carneio de Souza. Cada paciente foi avaliado em três momentos principais:
+Os dados usados aqui foram coletados em uma pesquisa aplicada voltada a pacientes com ELA (esclerose lateral amiotrófica). O estudo foi conduzido pela mestre e doutoranda em fisioterapia pela Universidade Federal do Rio Grande do Norte (UFRN), Bruna Ribeiro Pinheiro Carneio de Souza. Cada paciente foi avaliado em três momentos principais:
 - PRE (antes do tratamento)
 - POS1 (após a primeira intervenção)
 - POS2 (após a segunda intervenção)
 
 O objetivo da pesquisa é observar a evolução dos pacientes com o tratamento ao longo desses momentos. Este repositório contém o código para pré-processamento, extração de características, treinamento de um Random Forest e geração de predições (gráficos e arquivos de tempo) para inspeção e análise.
 
+O código foi desenvolvido por José Augusto Agripino de Oliveira, mestrando em Engenharia Elétrica e de Computação pela UFRN.
+
 
 ## 2) Treinamento do modelo (Opcional e não recomendado)
-> Aviso: para treinar o modelo você precisa de todos os dados de entrada (arquivos de movimentos e/ou features extraídas). Sem os dados completos o treinamento não será possível. Esta etapa é não recomendada, uma vez que o modelo treinado já está disponível neste repositório (`~/rf_model.pkl`).
+> Aviso: para treinar o modelo você precisa de todos os dados de entrada (arquivos de movimentos e/ou features extraídas). Sem os dados completos, o treinamento não será possível. **Esta etapa não é recomendada**, uma vez que o modelo treinado já está disponível neste repositório (`~/rf_model.pkl`).
 
 O script de treinamento é:
 
@@ -67,13 +69,13 @@ python src/main.py
 Exemplo não-interativo (uma execução):
 
 ```bash
-python src/main.py --once --patient P1 --stage POS1 --movement P1_alcancarbola_POS1
+python src/main.py --once --patient P4
 ```
 
 ou
 
 ```bash
-python src/main.py --once -p P1 -s POS1 -m P1_alcancarbola_POS1
+python src/main.py --once -p P4
 ```
 
 
@@ -114,7 +116,7 @@ docker compose up -d
 docker exec -it emg-container bash
 ```
 
-5. Logo em seguida, escolha entre o passo 5 e o passo 6. Execute o comando a seguir para usar o programa no modo iterativo:
+5. Em seguida, escolha entre o passo 5 e o passo 6. Execute o comando a seguir para usar o programa no modo iterativo:
 
 ```bash
 python src/main.py
@@ -126,7 +128,7 @@ python src/main.py
 python src/main.py --once --patient P1 --stage POS1 --movement P1_alcancarbola_POS1
 ```
 
-7. Quando quiser parar, pressione `ctrl+C` OU aperte `q` e depois `Enter`.
+7. Quando quiser parar, pressione `Ctrl+C` OU aperte `q` e depois `Enter`.
 
 8. Para você conseguir voltar ao seu terminal e sair do terminal do container, basta executar:
 
