@@ -3,7 +3,7 @@
 ## 1) Intuito do projeto
 Este projeto implementa um pipeline para detectar os instantes de início e fim de movimentos em sinais de EMG (eletromiografia) usando um classificador Random Forest. A ideia é extrair janelas de características a partir dos sinais, alimentar o classificador e produzir predições por janela que indicam quando um movimento começa e termina.
 
-Os dados usados aqui foram coletados em uma pesquisa aplicada voltada a pacientes com ELA (esclerose lateral amiotrófica). O estudo foi conduzido pela mestre e doutoranda em fisioterapia pela Universidade Federal do Rio Grande do Norte (UFRN), Bruna Ribeiro Pinheiro Carneio de Souza. Cada paciente foi avaliado em três momentos principais:
+Os dados usados aqui foram coletados em uma pesquisa aplicada voltada a pacientes com ELA (esclerose lateral amiotrófica). O estudo foi conduzido pela mestre e doutoranda em fisioterapia pela Universidade Federal do Rio Grande do Norte (UFRN), Bruna Ribeiro Pinheiro Carneio de Sousa Pinheiro. Cada paciente foi avaliado em três momentos principais:
 - PRE (antes do tratamento)
 - POS1 (após a primeira intervenção)
 - POS2 (após a segunda intervenção)
